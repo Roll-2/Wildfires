@@ -1,8 +1,8 @@
 # 🌲 Wildfire — Simulatore di foresta e incendi / Forest & Fire Simulator
 
-Un simulatore di crescita di una foresta e dei suoi incendi, scritto in **Assembly ARM64** per macOS (Apple Silicon), che gira interamente nel terminale.
+Un simulatore di crescita di una foresta e dei suoi incendi, scritto in **Assembly ARM64** per macOS (Apple Silicon), che gira interamente nel terminale (testato su kitty).
 
-A forest-fire simulator written in **ARM64 assembly** for macOS (Apple Silicon), running entirely in your terminal.
+A forest-fire simulator written in **ARM64 assembly** for macOS (Apple Silicon), running entirely in your terminal (Kitty-tested).
 
 ---
 
@@ -10,11 +10,11 @@ A forest-fire simulator written in **ARM64 assembly** for macOS (Apple Silicon),
 
 ### Ispirazione
 
-Questo progetto è ispirato alla simulazione di incendi forestali mostrata da **Derek Muller (Veritasium)** nel video *"Why can't we predict catastrophic wildfires?"*:
+Questo progetto è ispirato alla simulazione di incendi forestali mostrata da **Derek Muller (Veritasium)** su YouTube e nel seguente link:
 
 🔗 **https://www.veritasium.com/simulation5**
 
-Quella simulazione implementa il **modello Drossel–Schwabl** (autorganizzazione critica): alberi che crescono, fulmini rari che innescano incendi, e cenere che ricresce. Il nostro simulatore riprende l'idea — crescita, fulmini, propagazione del fuoco, cenere che sfuma — con controlli interattivi e una resa a mezzi-blocchi (`▀`) nel terminale.
+La loro simulazione implementa il **modello Drossel–Schwabl** (autorganizzazione critica): alberi che crescono, fulmini rari che innescano incendi, e cenere che ricresce. Questo simulatore riprende l'idea — crescita, fulmini, propagazione del fuoco, cenere che sfuma — con controlli interattivi e una resa a mezzi-blocchi (`▀`) nel terminale.
 
 ### Compilazione (macOS, Apple Silicon)
 
@@ -75,11 +75,11 @@ Se il terminale è troppo piccolo per la board richiesta, il programma stampa un
 
 ### Inspiration
 
-This project is inspired by the wildfire simulation shown by **Derek Muller (Veritasium)** in *"Why can't we predict catastrophic wildfires?"*:
+This project is inspired by the wildfire simulation shown by **Derek Muller (Veritasium)** on YouTube and at this link:
 
 🔗 **https://www.veritasium.com/simulation5**
 
-That simulation implements the **Drossel–Schwabl model** (self-organized criticality): trees that grow, rare lightning strikes that start fires, and ash that regrows. Ours takes the same ideas — growth, lightning, fire spread, fading ash — with interactive controls and half-block (`▀`) rendering in the terminal.
+That simulation implements the **Drossel–Schwabl model** (self-organized criticality): trees that grow, rare lightning strikes that start fires, and ash that regrows. This uses the same ideas — growth, lightning, fire spread, fading ash — with interactive controls and half-block (`▀`) rendering in the terminal.
 
 ### Building (macOS, Apple Silicon)
 
