@@ -1,0 +1,12 @@
+# Binario compilato
+/wildfire
+
+# Oggetti e file intermedi
+*.o
+*.out
+
+# Note di sessione dell'agente (utili in locale, non da versionare)
+/MEMORY.md
+
+# macOS
+.DS_Store
