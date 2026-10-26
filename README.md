@@ -1,6 +1,6 @@
-# 🌲 Wildfire — Simulatore di foresta e incendi / Forest & Fire Simulator
+# 🌲 Wildfire — Simulatore di Power-laws con incendi boschivi / Power-Law Forest Fire Simulator
 
-Un simulatore di crescita di una foresta e dei suoi incendi, scritto in **Assembly ARM64** per macOS (Apple Silicon), che gira interamente nel terminale (testato su kitty).
+Un simulatore di crescita di una foresta e i suoi incendi, scritto in **Assembly ARM64** per macOS (Apple Silicon), che gira interamente nel terminale (testato su kitty).
 
 A forest-fire simulator written in **ARM64 assembly** for macOS (Apple Silicon), running entirely in your terminal (Kitty-tested).
 
@@ -10,11 +10,11 @@ A forest-fire simulator written in **ARM64 assembly** for macOS (Apple Silicon),
 
 ### Ispirazione
 
-Questo progetto è ispirato alla simulazione di incendi forestali mostrata da **Derek Muller (Veritasium)** su YouTube e nel seguente link:
+Questo progetto è ispirato alla simulazione di incendi forestali mostrata da **Derek Muller (Veritasium)** su YouTube e al seguente link:
 
 🔗 **https://www.veritasium.com/simulation5**
 
-La loro simulazione implementa il **modello Drossel–Schwabl** (autorganizzazione critica): alberi che crescono, fulmini rari che innescano incendi, e cenere che ricresce. Questo simulatore riprende l'idea — crescita, fulmini, propagazione del fuoco, cenere che sfuma — con controlli interattivi e una resa a mezzi-blocchi (`▀`) nel terminale.
+La loro simulazione implementa il **modello Drossel–Schwabl** (autorganizzazione critica): alberi che crescono, fulmini rari che innescano incendi e cenere che li rigenera. Questo simulatore riprende l'idea — crescita, fulmini, propagazione del fuoco, cenere che sfuma — con controlli interattivi e una resa a mezzi-blocchi (`▀`) nel terminale.
 
 ### Compilazione (macOS, Apple Silicon)
 
@@ -46,7 +46,7 @@ clang -o wildfire wildfire.s -arch arm64
 | `--no-zoom` | Disabilita l'auto-zoom (default) |
 | `-h`, `--help` | Mostra l'aiuto |
 
-### Comandi in gioco
+### Comandi in gioco (frequenze di aggiornamento)
 
 | Tasto | Effetto |
 |---|---|
@@ -65,7 +65,7 @@ Se il terminale è troppo piccolo per la board richiesta, il programma stampa un
 - **Griglia adattiva** a mezzi-blocchi: ogni carattere `▀` disegna 2 celle (la riga pari nella metà superiore, la dispari in quella inferiore) → le celle risultano quasi quadrate.
 - **Crescita**: ogni cella vuota diventa albero con probabilità `(slider/100)²`-scalata; le celle adiacenti a un albero hanno un piccolo bonus (+0,05% assoluti) → nel tempo si formano cluster.
 - **Fulmini**: cercano una cella con un albero (fino a 64 tentativi), quindi la frequenza **non dipende dalla densità** della foresta.
-- **Fuoco**: si propaga di 1 cella/frame; le diagonali e le braci (cenere) incendiano anch'esse → fronte rotondo.
+- **Fuoco**: si propaga di 1 cella/frame; anche lungo le diagonali → fronte rotondo.
 - **Cenere che sfuma**: dopo la fiamma, la cella passa per 8 stadi di cenere (brace calda → quasi nero) prima di tornare vuota e ricrescere; le braci continuano a incendiare i vicini.
 - **Scale quadratiche**: spostando gli slider oltre il 40 l'effetto accelera in modo evidente (a 100 è 6,25× rispetto a 40).
 
@@ -75,7 +75,7 @@ Se il terminale è troppo piccolo per la board richiesta, il programma stampa un
 
 ### Inspiration
 
-This project is inspired by the wildfire simulation shown by **Derek Muller (Veritasium)** on YouTube and at this link:
+This project is inspired by the wildfire simulation shown by **Derek Muller (Veritasium)** on YouTube at this link:
 
 🔗 **https://www.veritasium.com/simulation5**
 
@@ -137,3 +137,7 @@ If the terminal is too small for the requested board, the program prints a hint 
 ---
 
 *Made with ❤️ and a lot of ARM64 assembly. Feedback and pull requests welcome.*
+
+### AI 
+
+- AI was used to write sections of this code.
